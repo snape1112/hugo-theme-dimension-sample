@@ -1,0 +1,26 @@
+- id: name
+  translation: "Name"
+
+- id: email
+  translation: "Email" 
+
+- id: message
+  translation: "Message" 
+
+- id: send
+  translation: "Send Message" 
+
+- id: reset
+  translation: "Reset" 
+
+- id: Intro
+  translation: "Intro" 
+
+- id: Work
+  translation: "Work" 
+
+- id: About
+  translation: "About" 
+
+- id: Contact
+  translation: "Contact" 
