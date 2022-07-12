@@ -1,0 +1,110 @@
+{{ partial "header.html" . }}
+
+<body class="is-preload">
+    <!-- Wrapper -->
+        <div id="wrapper">
+            {{ partial "language-switcher.html" .}}
+            <!-- Header -->
+                <header id="header">
+                    <div class="logo">
+                        <a href="/">
+                            <span class="icon">
+                                <span class="icon fa-gem"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="inner">
+                            <h1>{{ .Title | default "Title" }}</h1>
+                            {{ if .Site.Params.description }}
+                            <p>
+                                {{ .Site.Params.description }}
+                            </p>
+                            {{ end }}
+                            <!-- <p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
+								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p> -->
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            {{ range .Site.Menus.main }}
+                                {{if .URL}}
+                                    <li>
+                                        <a href="#{{ cond (in (.URL|urlize) "%") (.URL | base64Encode) (.URL) | urlize }}">{{ .Name }}</a>
+                                    </li>
+                                {{ else }}
+                                    <li><a href="{{ .Permalink }}">{{ .Name }}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </nav>
+                </header>
+
+            <!-- Main -->
+                <div id="main">
+
+                    {{ range .Pages }}
+                        {{if .Title }}
+                            {{if (eq .Title "Contact") }}
+                                <article id="contact">
+                                    <h2 class="major">Contact</h2>
+                                    <form method="post" action="#" id="demo-form">
+                                        <div class="fields">
+                                            <div class="field half">
+                                                <label for="name">{{ T "name"}}</label>
+                                                <input type="text" name="name" id="name" />
+                                            </div>
+                                            <div class="field half">
+                                                <label for="email">{{ T "email"}}</label>
+                                                <input type="text" name="email" id="email" />
+                                            </div>
+                                            <div class="field">
+                                                <label for="message">{{ T "message"}}</label>
+                                                <textarea name="message" id="message" rows="4"></textarea>
+                                            </div>
+                                        </div>
+                                        <ul class="actions">
+                                            <li>
+                                                <input 
+                                                    type="submit"
+                                                    value='{{ T "send"}}' 
+                                                    class="g-recaptcha" 
+                                                    data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" 
+                                                    data-callback='onSubmit' 
+                                                    data-action='submit'
+                                                />
+                                            </li>
+                                            <li><input type="reset" value='{{ T "reset"}}' /></li>
+                                        </ul>
+                                    </form>
+                                    <ul class="icons">
+                                        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                        <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                                    </ul>
+                                </article>
+                            {{ else }}
+                                {{if .Content }}
+                                    <article id="{{ cond (in (.Title|urlize) "%") (.Title | base64Encode) (.Title) | urlize }}">
+                                        <h2 class="major">{{ i18n .Title }}</h2>
+                                        <span class="image main"><img src="{{ .Params.image }}" alt="" /></span>
+                                        {{ .Content }}
+                                    </article>
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+
+                </div>
+
+                {{ partial "design.html" .}}
+
+        </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+</body>
+
+{{ partial "footer.html" .}}

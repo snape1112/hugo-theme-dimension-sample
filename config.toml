@@ -1,0 +1,66 @@
+baseURL = "http://example.org/"
+theme = "dimension"
+
+IsMultiLingual = true
+defaultContentLanguage = 'en'
+[languages]
+  [languages.en]
+    title = 'Dimension'
+    contentDir = 'content/english'
+    languageName = 'English'
+    weight = 1
+    [languages.en.params]
+      logo = "gem"
+      description = "A FULLY RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP AND RELEASED FOR FREE UNDER THE CREATIVE COMMONS LICENSE."
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = 'intro'
+        name = 'intro'
+        url = 'intro'
+        weight = 1
+      [[languages.en.menu.main]]
+        identifier = 'work'
+        name = 'work'
+        url = 'work'
+        weight = 2
+      [[languages.en.menu.main]]
+        identifier = 'about'
+        name = 'about'
+        url = 'about'
+        weight = 3
+      [[languages.en.menu.main]]
+        identifier = 'contact'
+        name = 'contact'
+        url = 'contact'
+        weight = 4
+
+  [languages.fr]
+    title = 'Dimension'
+    contentDir = 'content/french'
+    languageName = 'Français'
+    weight = 2
+    [languages.fr.params]
+      logo = "gem"
+      description = "UN MODÈLE DE SITE ENTIÈREMENT RÉACTIF CONÇU PAR HTML5 UP ET LIBÉRÉ GRATUITEMENT SOUS LA LICENCE CREATIVE COMMONS."
+    [languages.fr.menu]
+      [[languages.fr.menu.main]]
+        identifier = 'intro'
+        name = 'introduction'
+        url = 'intro'
+        weight = 1
+      [[languages.fr.menu.main]]
+        identifier = 'work'
+        name = 'travailler'
+        url = 'work'
+        weight = 2
+      [[languages.fr.menu.main]]
+        identifier = 'about'
+        name = 'À propos de'
+        url = 'about'
+        weight = 3
+      [[languages.fr.menu.main]]
+        identifier = 'contact'
+        name = 'Contact'
+        url = 'contact'
+        weight = 4
+
