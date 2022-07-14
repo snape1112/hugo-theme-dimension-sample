@@ -1,7 +1,7 @@
 ---
 title: "Intro"
 date: 2022-07-12T00:55:16+03:00
-draft: true
+draft: false
 image: "../images/intro.jpg"
 ---
 Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my awesome work.
