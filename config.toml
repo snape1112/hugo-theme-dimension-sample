@@ -45,7 +45,7 @@ defaultContentLanguage = 'en'
     [languages.fr.menu]
       [[languages.fr.menu.main]]
         identifier = 'intro'
-        name = 'introduction'
+        name = 'intro'
         url = 'intro'
         weight = 1
       [[languages.fr.menu.main]]
