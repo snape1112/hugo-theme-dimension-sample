@@ -67,3 +67,9 @@ $ hugo server -t dimension
 ```
 
 and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
+
+## Screenshots
+
+![Image 0](screenshots/pic0.png)
+![Image 1](screenshots/pic1.png)
+![Image 2](screenshots/pic2.png)
