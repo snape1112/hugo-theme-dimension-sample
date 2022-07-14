@@ -1,7 +1,7 @@
 ---
 title: "Work"
 date: 2022-07-12T00:55:16+03:00
-draft: true
+draft: false
 image: "../images/work.jpg"
 ---
 Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.
